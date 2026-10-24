@@ -1,2 +1,2 @@
-# thejackmichaelgithub.io
+# thejackmichael.github.io
 My Data Analysis Portfolio
