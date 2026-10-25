@@ -4,53 +4,39 @@
 
 <head>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Michael Jack's Data Analyst portfolio, skills, and contact information.">
+  <meta name="description" content="Jack Michael - Computer Science graduate turning data into clear, actionable insights." />
 
-  <title>Michael Jack | Data Analyst Portfolio</title>
+  <title>Jack Michael | Portfolio</title>
 
   <style>
 
     :root {
 
-      --background: #07111f;
+      --bg: #0a192f;
 
-      --surface: #0e1c2e;
+      --bg-card: #112240;
 
-      --surface-light: #14263b;
+      --text: #e6f1ff;
 
-      --text: #f1f5f9;
+      --muted: #8892b0;
 
-      --muted: #a8b7c9;
-
-      --accent: #10b981;
-
-      --accent-light: #34d399;
-
-      --border: rgba(148, 163, 184, 0.16);
+      --accent: #2dd4bf;
 
     }
 
-    * {
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-      margin: 0;
-
-      padding: 0;
-
-      box-sizing: border-box;
-
-      scroll-behavior: smooth;
-
-    }
+    html { scroll-behavior: smooth; }
 
     body {
 
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
 
-      background: var(--background);
+      background: var(--bg);
 
       color: var(--text);
 
@@ -58,23 +44,13 @@
 
     }
 
-    a {
+    a { color: var(--accent); text-decoration: none; }
 
-      color: inherit;
+    a:hover { text-decoration: underline; }
 
-      text-decoration: none;
+    /* Navigation */
 
-    }
-
-    .container {
-
-      width: min(1100px, 90%);
-
-      margin: 0 auto;
-
-    }
-
-    header {
+    nav {
 
       position: sticky;
 
@@ -82,331 +58,309 @@
 
       z-index: 10;
 
-      background: rgba(7, 17, 31, 0.94);
-
-      backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid var(--border);
-
-    }
-
-    nav {
-
-      min-height: 74px;
-
       display: flex;
-
-      align-items: center;
 
       justify-content: space-between;
 
-      gap: 20px;
+      align-items: center;
+
+      padding: 16px 24px;
+
+      background: rgba(10, 25, 47, 0.92);
+
+      backdrop-filter: blur(8px);
+
+      border-bottom: 1px solid #1d2d50;
 
     }
 
-    .logo {
+    nav .logo {
 
-      font-size: 1.15rem;
+      font-weight: 700;
 
-      font-weight: 800;
-
-      letter-spacing: 0.3px;
-
-    }
-
-    .logo span {
+      font-size: 1.2rem;
 
       color: var(--accent);
 
     }
 
-    .nav-links {
+    nav ul {
 
       display: flex;
 
-      gap: 24px;
+      gap: 20px;
 
       list-style: none;
 
-      font-size: 0.93rem;
-
-      color: var(--muted);
-
     }
 
-    .nav-links a:hover {
+    nav ul a { color: var(--text); font-size: 0.95rem; }
 
-      color: var(--accent-light);
+    nav ul a:hover {
 
-    }
+      color: var(--accent);
 
-    .hero {
-
-      min-height: 510px;
-
-      display: flex;
-
-      align-items: center;
-
-      padding: 85px 0;
-
-      background:
-
-        radial-gradient(ellipse at 85% 20%, rgba(16, 185, 129, 0.12), transparent 38%),
-
-        var(--background);
-
-    }
-
-    .eyebrow {
-
-      color: var(--accent-light);
-
-      text-transform: uppercase;
-
-      letter-spacing: 2px;
-
-      font-size: 0.8rem;
-
-      font-weight: 700;
-
-      margin-bottom: 14px;
-
-    }
-
-    h1 {
-
-      font-size: clamp(2.5rem, 7vw, 4.6rem);
-
-      line-height: 1.12;
-
-      letter-spacing: -1.8px;
-
-      margin-bottom: 20px;
-
-    }
-
-    h1 span {
-
-      color: var(--accent-light);
-
-    }
-
-    .hero p {
-
-      max-width: 650px;
-
-      color: var(--muted);
-
-      font-size: 1.08rem;
-
-      margin-bottom: 30px;
-
-    }
-
-    .button {
-
-      display: inline-block;
-
-      background: var(--accent);
-
-      color: #04130e;
-
-      font-weight: 700;
-
-      padding: 12px 23px;
-
-      border-radius: 8px;
-
-      transition: 0.2s ease;
-
-    }
-
-    .button:hover {
-
-      background: var(--accent-light);
-
-      transform: translateY(-2px);
+      text-decoration: none;
 
     }
 
     section {
 
-      padding: 78px 0;
+      max-width: 900px;
 
-      scroll-margin-top: 74px;
+      margin: 0 auto;
 
-    }
-
-    .section-title {
-
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-
-      margin-bottom: 12px;
+      padding: 80px 24px;
 
     }
 
-    .section-title span {
+    h2 {
 
-      color: var(--accent-light);
+      font-size: 1.8rem;
+
+      margin-bottom: 28px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
 
     }
 
-    .section-intro {
+    h2::after {
+
+      content: "";
+
+      flex: 1;
+
+      height: 1px;
+
+      background: #1d2d50;
+
+    }
+
+    /* Hero */
+
+    #hero {
+
+      min-height: 85vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+    }
+
+    #hero .hello {
+
+      color: var(--accent);
+
+      font-size: 1rem;
+
+      margin-bottom: 8px;
+
+    }
+
+    #hero h1 {
+
+      font-size: clamp(2.2rem, 7vw, 4rem);
+
+      line-height: 1.15;
+
+    }
+
+    #hero h1 span { color: var(--muted); }
+
+    #hero p {
+
+      max-width: 560px;
 
       color: var(--muted);
 
-      max-width: 680px;
+      margin: 20px 0 32px;
 
-      margin-bottom: 32px;
-
-    }
-
-    .about-card,
-
-    .skill-card,
-
-    .contact-card {
-
-      background: var(--surface);
-
-      border: 1px solid var(--border);
-
-      border-radius: 14px;
-
-      padding: 28px;
-
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+      font-size: 1.1rem;
 
     }
 
-    .about-card p {
+    .btn {
+
+      display: inline-block;
+
+      padding: 12px 26px;
+
+      border: 1.5px solid var(--accent);
+
+      border-radius: 6px;
+
+      color: var(--accent);
+
+      font-weight: 600;
+
+      transition: background 0.2s;
+
+    }
+
+    .btn:hover {
+
+      background: rgba(45, 212, 191, 0.12);
+
+      text-decoration: none;
+
+    }
+
+    /* About */
+
+    #about p {
 
       color: var(--muted);
 
-      margin-bottom: 14px;
+      margin-bottom: 16px;
 
     }
 
-    .about-card p:last-child {
+    #about p strong { color: var(--text); }
 
-      margin-bottom: 0;
+    /* Skills */
 
-    }
-
-    .skills-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-
-      gap: 18px;
-
-    }
-
-    .skill-card h3 {
-
-      color: var(--accent-light);
-
-      margin-bottom: 10px;
-
-    }
-
-    .skill-card p {
-
-      color: var(--muted);
-
-      font-size: 0.95rem;
-
-    }
-
-    /* Projects are intentionally left blank for now. */
-
-    .contact-card {
+    .skills {
 
       display: flex;
 
       flex-wrap: wrap;
 
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 24px;
+      gap: 12px;
 
     }
 
-    .contact-card p {
+    .skill {
+
+      background: var(--bg-card);
+
+      color: var(--accent);
+
+      padding: 8px 18px;
+
+      border-radius: 999px;
+
+      font-size: 0.92rem;
+
+    }
+
+    /* Projects */
+
+    .projects {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 20px;
+
+    }
+
+    .card {
+
+      background: var(--bg-card);
+
+      padding: 24px;
+
+      border-radius: 10px;
+
+      transition: transform 0.2s;
+
+      border: 1px solid transparent;
+
+    }
+
+    .card:hover {
+
+      transform: translateY(-4px);
+
+      border-color: var(--accent);
+
+    }
+
+    .card h3 { margin-bottom: 8px; font-size: 1.15rem; }
+
+    .card p {
 
       color: var(--muted);
 
-      margin-top: 8px;
+      font-size: 0.95rem;
+
+      margin-bottom: 14px;
+
+    }
+
+    .card .tags {
+
+      font-size: 0.8rem;
+
+      color: var(--accent);
+
+      margin-bottom: 14px;
+
+    }
+
+    .card a { font-size: 0.9rem; font-weight: 600; }
+
+    /* Contact */
+
+    #contact { text-align: center; }
+
+    #contact h2 { justify-content: center; }
+
+    #contact h2::after { display: none; }
+
+    #contact p {
+
+      color: var(--muted);
+
+      max-width: 520px;
+
+      margin: 0 auto 28px;
+
+    }
+
+    .contact-links {
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 24px;
+
+      margin-top: 28px;
 
     }
 
     footer {
 
-      padding: 25px 0;
-
-      border-top: 1px solid var(--border);
-
       text-align: center;
+
+      padding: 28px;
 
       color: var(--muted);
 
-      font-size: 0.88rem;
+      font-size: 0.85rem;
 
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
 
-      nav {
+      nav { padding: 16px; }
 
-        padding: 15px 0;
+      nav ul { gap: 12px; }
 
-        align-items: flex-start;
+      nav ul a { font-size: 0.85rem; }
 
-        flex-direction: column;
-
-      }
-
-      .nav-links {
-
-        flex-wrap: wrap;
-
-        gap: 10px 18px;
-
-      }
-
-      .hero {
-
-        min-height: auto;
-
-        padding: 75px 0;
-
-      }
-
-      section {
-
-        padding: 58px 0;
-
-      }
-
-      .skills-grid {
-
-        grid-template-columns: 1fr;
-
-      }
-
-      .about-card,
-
-      .skill-card,
-
-      .contact-card {
-
-        padding: 22px;
-
-      }
+      section { padding: 60px 20px; }
 
     }
 
@@ -416,265 +370,163 @@
 
 <body>
 
-  <header>
+  <nav>
 
-    <nav class="container">
+    <div class="logo">Jack Michael</div>
 
-      <a class="logo" href="#home">Michael Jack<span>.</span></a>
+    <ul>
 
-      <ul class="nav-links">
+      <li><a href="#about">About</a></li>
 
-        <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
 
-        <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
 
-        <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
 
-        <li><a href="#skills">Skills</a></li>
+    </ul>
 
-        <li><a href="#contact">Contact</a></li>
+  </nav>
 
-      </ul>
+  <section id="hero">
 
-    </nav>
+    <p class="hello">Hi, my name is</p>
 
-  </header>
+    <h1>Jack Michael.<br />
 
-  <main>
+      <span>I turn data into clear insights.</span>
 
-    <section class="hero" id="home">
+    </h1>
 
-      <div class="container">
+    <p>
 
-        <div class="eyebrow">Aspiring Data Analyst</div>
+      Computer Science graduate based in Nigeria, passionate about data analysis,
 
-        <h1>Hello, I'm <span>Michael Jack</span></h1>
+      business, and finance. I build dashboards that tell the story behind the numbers.
 
-        <p>
+    </p>
 
-          I am developing my skills in data analysis, transforming raw data
+    <div>
 
-          into meaningful insights that support better decisions. Welcome
-
-          to my professional portfolio.
-
-        </p>
-
-        <a class="button" href="#about">Discover My Journey</a>
-
-      </div>
-
-    </section>
-
-    <section id="about">
-
-      <div class="container">
-
-        <h2 class="section-title">About <span>Me</span></h2>
-
-        <p class="section-intro">
-
-          A little about my background and my journey into data analytics.
-
-        </p>
-
-        <div class="about-card">
-
-          <p>
-
-            I am a Computer Science graduate building a career in data
-
-            analytics. I enjoy exploring data, identifying patterns, and
-
-            presenting information in ways that are easy to understand.
-
-          </p>
-
-          <p>
-
-            My learning journey includes Excel, SQL, Power BI, and Python.
-
-            I am focused on strengthening my practical skills and applying
-
-            them to real-world business questions.
-
-          </p>
-
-          <p>
-
-            My goal is to grow into a capable Data Analyst who helps
-
-            organizations make informed, data-driven decisions.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="projects">
-
-      <div class="container">
-
-        <h2 class="section-title">My <span>Projects</span></h2>
-
-        <!-- Project cards will be added here later. -->
-
-      </div>
-
-    </section>
-
-    <section id="skills">
-
-      <div class="container">
-
-        <h2 class="section-title">My <span>Skills</span></h2>
-
-        <p class="section-intro">
-
-          Tools and technical skills I am developing through practical
-
-          learning and projects.
-
-        </p>
-
-        <div class="skills-grid">
-
-          <div class="skill-card">
-
-            <h3>Microsoft Excel</h3>
-
-            <p>
-
-              Data cleaning, formulas, pivot tables, data organization,
-
-              and reporting.
-
-            </p>
-
-          </div>
-
-          <div class="skill-card">
-
-            <h3>SQL</h3>
-
-            <p>
-
-              Querying databases, filtering data, joins, aggregations,
-
-              and analysis.
-
-            </p>
-
-          </div>
-
-          <div class="skill-card">
-
-            <h3>Power BI</h3>
-
-            <p>
-
-              Data modeling, measures, interactive dashboards, and
-
-              visual reporting.
-
-            </p>
-
-          </div>
-
-          <div class="skill-card">
-
-            <h3>Python</h3>
-
-            <p>
-
-              Building foundational skills in data manipulation,
-
-              analysis, and visualization.
-
-            </p>
-
-          </div>
-
-          <div class="skill-card">
-
-            <h3>Data Visualization</h3>
-
-            <p>
-
-              Presenting findings clearly through charts, dashboards,
-
-              and reports.
-
-            </p>
-
-          </div>
-
-          <div class="skill-card">
-
-            <h3>Problem Solving</h3>
-
-            <p>
-
-              Exploring questions, identifying patterns, and using
-
-              evidence to support conclusions.
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="contact">
-
-      <div class="container">
-
-        <h2 class="section-title">Get in <span>Touch</span></h2>
-
-        <div class="contact-card">
-
-          <div>
-
-            <h3>Let's connect</h3>
-
-            <p>
-
-              Open to junior data analyst opportunities, internships,
-
-              and professional connections.
-
-            </p>
-
-          </div>
-
-          <!-- Add your verified email and LinkedIn links here later. -->
-
-          <a class="button" href="mailto:">Contact Me</a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-
-    <div class="container">
-
-      <p>&copy; 2026 Michael Jack. All rights reserved.</p>
+      <a class="btn" href="#projects">View my work</a>
 
     </div>
 
+  </section>
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+
+      I'm <strong>Jack Michael</strong>, a Computer Science graduate based in Nigeria with hands-on
+
+      training in data analysis. I enjoy turning raw, messy data into clear dashboards and finding
+
+      the story behind the numbers. <strong>Power BI</strong> is my tool of choice for that.
+
+    </p>
+
+    <p>
+
+      I think critically, communicate ideas clearly, and pay close attention to detail. I'm
+
+      comfortable working independently or as part of a team, I stay consistent when there's
+
+      a deadline, and I treat feedback as a chance to improve.
+
+    </p>
+
+    <p>
+
+      I'm especially interested in <strong>business and finance</strong>, and I'm also building
+
+      skills in video editing and content creation, which helps me present insights in a way people
+
+      actually engage with. I'm open to remote opportunities and always looking to learn and grow.
+
+    </p>
+
+  </section>
+
+  <section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills">
+
+      <span class="skill">Power BI</span>
+
+      <span class="skill">Data Cleaning</span>
+
+      <span class="skill">Dashboard Design</span>
+
+      <span class="skill">Data Storytelling</span>
+
+      <span class="skill">Critical Thinking</span>
+
+      <span class="skill">Communication</span>
+
+      <span class="skill">Attention to Detail</span>
+
+      <span class="skill">Video Editing</span>
+
+      <span class="skill">Teamwork</span>
+
+    </div>
+
+  </section>
+
+  <section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+      <!-- Projects intentionally left empty -->
+
+    </div>
+
+  </section>
+
+  <section id="contact">
+
+    <h2>Get In Touch</h2>
+
+    <p>
+
+      I'm open to remote roles and new opportunities. Whether you have a question or just want to
+
+      say hello, my inbox is always open.
+
+    </p>
+
+    <div class="contact-links">
+
+      <a href="https://github.com/thejackmichael"
+
+         target="_blank" rel="noopener noreferrer">GitHub</a>
+
+      <a href="https://www.linkedin.com/in/jack-michael-699b41395?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+
+         target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    &copy; <span id="year"></span> Jack Michael. All rights reserved.
+
   </footer>
+
+  <script>
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+  </script>
 
 </body>
 
